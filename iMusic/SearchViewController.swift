@@ -1,16 +1,11 @@
 
-
 import UIKit
 
-class ViewController: UIViewController {
-
+class SearchViewController : UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
     }
-
-
 }
-
