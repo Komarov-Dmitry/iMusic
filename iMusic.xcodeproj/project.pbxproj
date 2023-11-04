@@ -31,6 +31,7 @@
 		E3CB73A42AF17403008B9E43 /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB73A32AF17403008B9E43 /* SearchMusicViewController.swift */; };
 		E3D525B42AF4293400505BCC /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D525B32AF4293400505BCC /* SearchResponse.swift */; };
 		E3D525B62AF443C400505BCC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D525B52AF443C400505BCC /* NetworkService.swift */; };
+		E3DBA3282AF6C3D10038F21A /* CMTimeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DBA3272AF6C3D10038F21A /* CMTimeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		E3CB73A32AF17403008B9E43 /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
 		E3D525B32AF4293400505BCC /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		E3D525B52AF443C400505BCC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E3DBA3272AF6C3D10038F21A /* CMTimeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMTimeExtension.swift; sourceTree = "<group>"; };
 		E52FF9CD92252903689FEB69 /* Pods-iMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.release.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.release.xcconfig"; sourceTree = "<group>"; };
 		EC5E988FA7732262C5159643 /* Pods_iMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE773EDC5DE4D9172DD96B3F /* Pods-iMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusic.debug.xcconfig"; path = "Target Support Files/Pods-iMusic/Pods-iMusic.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E31BB00D2AF4EF0A00C55227 /* UIViewController + Storyboard.swift */,
+				E3DBA3272AF6C3D10038F21A /* CMTimeExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				E3D525B42AF4293400505BCC /* SearchResponse.swift in Sources */,
 				E3B96B712AF4503C0012FF6F /* SearchInteractor.swift in Sources */,
 				E3C5B1EA2AF690F100B17729 /* FooterView.swift in Sources */,
+				E3DBA3282AF6C3D10038F21A /* CMTimeExtension.swift in Sources */,
 				E39A955D2AF67594007295BF /* TrackCell.swift in Sources */,
 				E3CB738E2AF10544008B9E43 /* AppDelegate.swift in Sources */,
 				E3CB73A22AF172B2008B9E43 /* MainTabBarController.swift in Sources */,

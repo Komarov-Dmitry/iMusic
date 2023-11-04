@@ -34,7 +34,6 @@ class TrackCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
         trackImageView.image = nil
     }
     
@@ -42,7 +41,8 @@ class TrackCell: UITableViewCell {
         trackNameLabel.text = viewModel.trackName
         trackArtistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
-        
+        trackImageView.layer.cornerRadius = 8
+
         guard let url = URL(string: viewModel.iconUrlString ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
     }
