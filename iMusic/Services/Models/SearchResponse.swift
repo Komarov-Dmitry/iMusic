@@ -11,4 +11,5 @@ struct Track: Decodable {
     var collectionName: String?
     var artworkUrl100: String?
     var artistName: String
+    var previewUrl: String?
 }

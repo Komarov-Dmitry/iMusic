@@ -19,7 +19,7 @@ class SearchMusicViewController : UITableViewController {
     //MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUoSearchBar()
+        setUpSearchBar()
         view.backgroundColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
         
@@ -38,7 +38,7 @@ class SearchMusicViewController : UITableViewController {
         return cell
     }
     
-    private func setUoSearchBar() {
+    private func setUpSearchBar() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
