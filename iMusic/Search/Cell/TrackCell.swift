@@ -41,7 +41,7 @@ class TrackCell: UITableViewCell {
         trackNameLabel.text = viewModel.trackName
         trackArtistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
-        trackImageView.layer.cornerRadius = 8
+        trackImageView.layer.cornerRadius = 7
 
         guard let url = URL(string: viewModel.iconUrlString ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
