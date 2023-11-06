@@ -37,7 +37,10 @@ class TrackCell: UITableViewCell {
         trackImageView.image = nil
     }
     
-    func set(viewModel: TrackCellViewModel) {
+    var cell: SearchViewModel.Cell?
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        self.cell = viewModel
         trackNameLabel.text = viewModel.trackName
         trackArtistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
@@ -45,5 +48,15 @@ class TrackCell: UITableViewCell {
 
         guard let url = URL(string: viewModel.iconUrlString ?? "") else { return }
         trackImageView.sd_setImage(with: url, completed: nil)
+    }
+    
+    
+    @IBAction func addTrackAction(_ sender: UIButton) {
+        let defaults = UserDefaults.standard
+        
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: cell, requiringSecureCoding: false) {
+            defaults.setValue(savedData, forKey: "tracks")
+        }
+        
     }
 }
