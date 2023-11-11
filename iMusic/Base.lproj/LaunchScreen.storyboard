@@ -17,13 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Shape" translatesAutoresizingMaskIntoConstraints="NO" id="7Ue-5J-8ps">
-                                <rect key="frame" x="46" y="388" width="301" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Shape" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-0z-qKK">
+                                <rect key="frame" x="32" y="386.66666666666669" width="329" height="79"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zbt-0z-qKK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="F1x-AJ-UX6"/>
+                            <constraint firstItem="zbt-0z-qKK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rGe-8Z-G2W"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

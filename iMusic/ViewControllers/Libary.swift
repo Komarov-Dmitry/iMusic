@@ -70,20 +70,28 @@ struct Libary: View {
     
     func delete(at offsets: IndexSet) {
         tracks.remove(atOffsets: offsets)
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+        do {
+            let savedData = try NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false)
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        } catch {
+            print("Error archiving tracks: \(error.localizedDescription)")
         }
+
     }
     
     func delete(track: SearchViewModel.Cell) {
         let index = tracks.firstIndex(of: track)
         guard let myIndex = index else { return }
         tracks.remove(at: myIndex)
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
+        do {
+            let savedData = try NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false)
             let defaults = UserDefaults.standard
             defaults.set(savedData, forKey: UserDefaults.favouriteTrackKey)
+        } catch {
+            print("Error archiving tracks: \(error.localizedDescription)")
         }
+
     }
 }
 

@@ -3,7 +3,7 @@
 import UIKit
 import SwiftUI
 
-protocol MainTabBarControllerDelegate: class {
+protocol MainTabBarControllerDelegate: AnyObject {
     func minimizeTrackDetailController()
     func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)
     
@@ -16,9 +16,9 @@ class MainTabBarController : UITabBarController {
     private var maxTopAnchorConstraint: NSLayoutConstraint!
     private var bottomAnchorConstraint: NSLayoutConstraint!
     
-    let searchVC: SearchViewController = SearchViewController.loadFromStoryBoard()
+    lazy var searchVC: SearchViewController = SearchViewController.loadFromStoryBoard()
 
-    let trackDetailView: TrackDetailView = TrackDetailView.loadFromNib()
+    lazy var trackDetailView: TrackDetailView = TrackDetailView.loadFromNib()
 
     
     
