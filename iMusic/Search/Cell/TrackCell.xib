@@ -41,7 +41,7 @@
                         <color key="textColor" red="0.4941176471" green="0.4941176471" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="P5S-cC-jsc">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="P5S-cC-jsc">
                         <rect key="frame" x="353" y="34" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" red="0.90980392160000001" green="0.27058823529999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,6 +54,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addTrackOutlet" destination="P5S-cC-jsc" id="4rp-TE-6oD"/>
                 <outlet property="collectionNameLabel" destination="G78-GW-1uI" id="BYZ-4Y-gFT"/>
                 <outlet property="trackArtistNameLabel" destination="xcP-0W-XDL" id="Z1T-Nr-zUe"/>
                 <outlet property="trackImageView" destination="zxb-Xt-JJJ" id="zuB-de-MGE"/>

@@ -10,6 +10,9 @@
 		03F2D330B22D7CF5429D7DE0 /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5E988FA7732262C5159643 /* Pods_iMusic.framework */; };
 		E31BB00C2AF4EBC000C55227 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E31BB00B2AF4EBC000C55227 /* SearchViewController.storyboard */; };
 		E31BB00E2AF4EF0A00C55227 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31BB00D2AF4EF0A00C55227 /* UIViewController + Storyboard.swift */; };
+		E37FC3AB2AFA34E400B6E9CA /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37FC3AA2AFA34E400B6E9CA /* UserDefaults.swift */; };
+		E37FC3AE2AFA403900B6E9CA /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = E37FC3AD2AFA403900B6E9CA /* URLImage */; };
+		E37FC3B02AFA403900B6E9CA /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = E37FC3AF2AFA403900B6E9CA /* URLImageStore */; };
 		E39A955B2AF67564007295BF /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39A955A2AF67564007295BF /* TrackCell.xib */; };
 		E39A955D2AF67594007295BF /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39A955C2AF67594007295BF /* TrackCell.swift */; };
 		E3A86E7D2AF7829600134193 /* Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A86E7C2AF7829600134193 /* Nib.swift */; };
@@ -39,6 +42,7 @@
 /* Begin PBXFileReference section */
 		E31BB00B2AF4EBC000C55227 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		E31BB00D2AF4EF0A00C55227 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		E37FC3AA2AFA34E400B6E9CA /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		E39A955A2AF67564007295BF /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		E39A955C2AF67594007295BF /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		E3A86E7C2AF7829600134193 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37FC3AE2AFA403900B6E9CA /* URLImage in Frameworks */,
+				E37FC3B02AFA403900B6E9CA /* URLImageStore in Frameworks */,
 				03F2D330B22D7CF5429D7DE0 /* Pods_iMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +120,7 @@
 			children = (
 				E39A955A2AF67564007295BF /* TrackCell.xib */,
 				E39A955C2AF67594007295BF /* TrackCell.swift */,
+				E37FC3AA2AFA34E400B6E9CA /* UserDefaults.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -192,12 +199,9 @@
 			children = (
 				E3CB738D2AF10544008B9E43 /* AppDelegate.swift */,
 				E3CB738F2AF10544008B9E43 /* SceneDelegate.swift */,
+				E3D46D712B000DB600880BAA /* ViewControllers */,
 				E3B96B642AF44F6E0012FF6F /* Services */,
-				E3CB73A12AF172B2008B9E43 /* MainTabBarController.swift */,
-				E3A86E7E2AF7C31700134193 /* Libary.swift */,
 				E3B96B552AF44EAC0012FF6F /* Search */,
-				E3CB73A32AF17403008B9E43 /* SearchMusicViewController.swift */,
-				E3CB73912AF10544008B9E43 /* ViewController.swift */,
 				E31BB00F2AF4EF4900C55227 /* Helpers */,
 				E3CB73932AF10544008B9E43 /* Main.storyboard */,
 				E3CB73962AF10545008B9E43 /* Assets.xcassets */,
@@ -205,6 +209,17 @@
 				E3CB739B2AF10545008B9E43 /* Info.plist */,
 			);
 			path = iMusic;
+			sourceTree = "<group>";
+		};
+		E3D46D712B000DB600880BAA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3CB73A12AF172B2008B9E43 /* MainTabBarController.swift */,
+				E3A86E7E2AF7C31700134193 /* Libary.swift */,
+				E3CB73A32AF17403008B9E43 /* SearchMusicViewController.swift */,
+				E3CB73912AF10544008B9E43 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +240,10 @@
 			dependencies = (
 			);
 			name = iMusic;
+			packageProductDependencies = (
+				E37FC3AD2AFA403900B6E9CA /* URLImage */,
+				E37FC3AF2AFA403900B6E9CA /* URLImageStore */,
+			);
 			productName = iMusic;
 			productReference = E3CB738A2AF10544008B9E43 /* iMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -253,6 +272,9 @@
 				Base,
 			);
 			mainGroup = E3CB73812AF10544008B9E43;
+			packageReferences = (
+				E37FC3AC2AFA403900B6E9CA /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = E3CB738B2AF10544008B9E43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,6 +352,7 @@
 				E3CB73922AF10544008B9E43 /* ViewController.swift in Sources */,
 				E3D525B42AF4293400505BCC /* SearchResponse.swift in Sources */,
 				E3B96B712AF4503C0012FF6F /* SearchInteractor.swift in Sources */,
+				E37FC3AB2AFA34E400B6E9CA /* UserDefaults.swift in Sources */,
 				E3C5B1EA2AF690F100B17729 /* FooterView.swift in Sources */,
 				E3DBA3282AF6C3D10038F21A /* CMTimeExtension.swift in Sources */,
 				E39A955D2AF67594007295BF /* TrackCell.swift in Sources */,
@@ -504,7 +527,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +559,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -575,6 +598,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E37FC3AC2AFA403900B6E9CA /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E37FC3AD2AFA403900B6E9CA /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E37FC3AC2AFA403900B6E9CA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		E37FC3AF2AFA403900B6E9CA /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E37FC3AC2AFA403900B6E9CA /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E3CB73822AF10544008B9E43 /* Project object */;
 }
